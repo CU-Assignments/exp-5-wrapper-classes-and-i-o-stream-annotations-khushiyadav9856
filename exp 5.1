@@ -1,0 +1,21 @@
+import java.util.ArrayList; 
+import java.util.List; 
+public class AutoBoxingUnboxing { 
+public static void main(String[] args) { 
+List<Integer> numbers = new ArrayList<>(); 
+String[] numStrings = {"10", "20", "30", "40", "50"}; 
+for (String num : numStrings) { 
+numbers.add(Integer.parseInt(num)); 
+} 
+ 
+int sum = calculateSum(numbers); 
+System.out.println("Sum of numbers: " + sum); 
+} 
+public static int calculateSum(List<Integer> numbers) { 
+int sum = 0; 
+for (Integer num : numbers) { 
+sum += num; 
+} 
+return sum; 
+} 
+}
